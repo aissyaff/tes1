@@ -1,0 +1,119 @@
+<html>
+<head>
+    <title>BookBase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-white-100">
+    <div class="bg-white shadow-md">
+      <div class="container mx-auto p-4 flex flex-col md:flex-row items-center justify-between">
+        
+     
+        <div class="flex flex-col items-center justify-between w-full md:w-auto">
+          <a href="#" class="text-2xl font-bold text-black">BookBase</a>
+        </div>
+  
+    
+        <div class="flex flex-col md:flex-row md:space-x-2 mt-2 md:mt-0 w-full md:w-auto"></div>
+  
+     
+        <div class="w-full flex justify-center mt-4 md:mt-0 md:w-auto md:ml-8">
+          <div class="relative w-full max-w-xs">
+            <input type="text" placeholder="Search" class="p-2 pl-10 pr-4 border rounded-md focus:outline-none focus:ring focus:ring-blue-300 w-full">
+            <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600"></i>
+          </div>
+        </div>
+  
+        <div class="hidden md:flex items-center ml-8 space-x-12 mt-4 md:mt-0">
+          <a href="#" class="text-gray-700">Home</a>
+          <a href="#" class="text-gray-700">Semester</a>
+          <a href="#" class="text-gray-700">Logout</a>
+        </div>
+  
+        <div class="hidden md:flex items-center space-x-2 ml-auto mt-4 md:mt-0">
+          <i class="fas fa-user-circle text-2xl"></i>
+          <span class="text-black">Mahasiswa</span>
+        </div>
+  
+        <div class="md:hidden mt-4 w-full flex justify-center">
+          <button id="hamburger" class="text-black focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+  
+      <div id="mobileMenu" class="hidden md:hidden w-full mt-4 space-y-4 p-4 bg-white shadow-lg">
+        <a href="#" class="text-gray-700 block">Home</a>
+        <a href="#" class="text-gray-700 block">Semester</a>
+        <a href="#" class="text-gray-700 block">Logout</a>
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-user-circle text-2xl"></i>
+          <span class="text-black">Dosen</span>
+        </div>
+      </div>
+    </div>
+    <main class="container mx-auto p-4">
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-xl font-semibold text-black-700 mb-4">Last Seen</h2>
+            <div class="flex overflow-x-auto space-x-4">
+                <div class="w-52 h-52 bg-white border border-black rounded-lg flex-shrink-0">
+                    <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+                        Komunikasi & Desain Visual
+                    </div>
+                </div>
+                <div class="w-52 h-52 bg-white border border-black rounded-lg flex-shrink-0">
+                    <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+                        Komunikasi & Desain Visual
+                    </div>
+                </div>
+                <div class="w-52 h-52 bg-white border border-black rounded-lg flex-shrink-0">
+                    <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+                        Komunikasi & Desain Visual
+                    </div>
+                </div>
+                <div class="w-52 h-52 bg-white border border-black rounded-lg flex-shrink-0">
+                    <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+                        Komunikasi & Desain Visual
+                    </div>
+                </div>
+                <div class="w-52 h-52 bg-white border border-black rounded-lg flex-shrink-0">
+                    <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+                        Komunikasi & Desain Visual
+                    </div>
+                </div>
+                <div class="w-52 h-52 bg-white border border-black rounded-lg flex-shrink-0">
+                    <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+                        Komunikasi & Desain Visual
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-xl font-semibold text-black-700 mb-4">Courses</h2>
+            <div class="flex overflow-x-auto space-x-4">
+                <div class="w-52 h-52 bg-white border border-black rounded-lg flex-shrink-0">
+                    <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+                        <div class="text-lg">Bahasa Inggris</div>
+                        <div class="text-sm font-light">Semester 4</div>
+                    </div>
+                </div>
+                <div class="w-52 h-52 bg-white border border-black rounded-lg flex-shrink-0">
+                    <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+                        <div class="text-lg">Teknologi Multimedia</div>
+                        <div class="text-sm font-light">Semester 4</div>
+                    </div>
+                </div>
+                <div class="w-52 h-52 bg-white border border-black rounded-lg flex-shrink-0">
+                    <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+                        <div class="text-lg">Sistem Basis Data</div>
+                        <div class="text-sm font-light">Semester 4</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

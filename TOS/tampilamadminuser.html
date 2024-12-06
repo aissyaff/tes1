@@ -1,0 +1,159 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-white min-h-screen">
+    <div class="w-full">
+        <header class="flex justify-between items-center p-4 border-b">
+            <h1 class="text-xl font-bold">BookBase</h1>
+            <div class="flex items-center">
+                <i class="fas fa-user-circle text-xl mr-2"></i>
+                <span>Admin</span>
+            </div>
+        </header>
+        
+        <div class="flex flex-col md:flex-row">
+            <!-- Sidebar -->
+            <nav class="w-full md:w-20 bg-white border-r flex flex-row md:flex-col items-center py-4 md:h-screen">
+                <button class="md:mb-8 mb-4 md:mr-0 mr-8"><i class="fas fa-home text-xl"></i></button>
+                <button class="md:mb-8 mb-4 md:mr-0 mr-8"><i class="fas fa-book text-xl"></i></button>
+                <button class="md:mb-8 mb-4 md:mr-0 mr-8"><i class="fas fa-folder text-xl"></i></button>
+                <div class="w-full border-t mt-8"></div>
+                <button class="mt-8"><i class="fas fa-sign-out-alt text-xl"></i></button>
+            </nav>
+            
+            <!-- Main Content -->
+            <main class="flex-1 p-4">
+                <h1 class="text-xl mb-4">Manajemen Pengguna</h1>
+                
+                <!-- Form Tambah Pengguna Baru -->
+                <div class="mb-8">
+                    <h2 class="text-lg mb-2">Tambah Pengguna Baru</h2>
+                    <form id="userForm" class="bg-gray-100 p-4 rounded">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+                            <input type="text" id="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        </div>
+                        <div class="mb-4">
+                            <label for="role" class="block text-sm font-medium text-gray-700">Peran</label>
+                            <select id="role" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                <option>Admin</option>
+                                <option>Mahasiswa</option>
+                                <option>Dosen</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Tambah</button>
+                    </form>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border" id="userTable">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 border-b">ID</th>
+                                <th class="py-2 px-4 border-b">Nama</th>
+                                <th class="py-2 px-4 border-b">Email</th>
+                                <th class="py-2 px-4 border-b">Peran</th>
+                                <th class="py-2 px-4 border-b">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b">1</td>
+                                <td class="py-2 px-4 border-b">Moh Syachran Niode</td>
+                                <td class="py-2 px-4 border-b">syachranniode@gmail.com</td>
+                                <td class="py-2 px-4 border-b">Admin</td>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="text-blue-500 hover:underline">Edit</button>
+                                    <button class="text-red-500 hover:underline ml-2" onclick="deleteRow(this)">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">2</td>
+                                <td class="py-2 px-4 border-b">Vikcraen Dangkua</td>
+                                <td class="py-2 px-4 border-b">vikcraendangkua@gmail.com</td>
+                                <td class="py-2 px-4 border-b">Dosen</td>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="text-blue-500 hover:underline">Edit</button>
+                                    <button class="text-red-500 hover:underline ml-2" onclick="deleteRow(this)">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">3</td>
+                                <td class="py-2 px-4 border-b">Rahman Takdir</td>
+                                <td class="py-2 px-4 border-b">rahmantakdir@gmail.com</td>
+                                <td class="py-2 px-4 border-b">Dosen</td>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="text-blue-500 hover:underline">Edit</button>
+                                    <button class="text-red-500 hover:underline ml-2" onclick="deleteRow(this)">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">4</td>
+                                <td class="py-2 px-4 border-b">Ais Syafarinah Idris</td>
+                                <td class="py-2 px-4 border-b">aissyafarinah@gmail.com</td>
+                                <td class="py-2 px-4 border-b">Mahasiswa</td>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="text-blue-500 hover:underline">Edit</button>
+                                    <button class="text-red-500 hover:underline ml-2" onclick="deleteRow(this)">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">5</td>
+                                <td class="py-2 px-4 border-b">April Agaatz</td>
+                                <td class="py-2 px-4 border-b">aprilagaatz@gmail.com</td>
+                                <td class="py-2 px-4 border-b">Mahasiswa</td>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="text-blue-500 hover:underline">Edit</button>
+                                    <button class="text-red-500 hover:underline ml-2" onclick="deleteRow(this)">Hapus</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const role = document.getElementById('role').value;
+            
+            const table = document.getElementById('userTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            
+            const idCell = newRow.insertCell(0);
+            const nameCell = newRow.insertCell(1);
+            const emailCell = newRow.insertCell(2);
+            const roleCell = newRow.insertCell(3);
+            const actionCell = newRow.insertCell(4);
+            
+            const rowCount = table.rows.length;
+            idCell.innerHTML = rowCount;
+            nameCell.innerHTML = name;
+            emailCell.innerHTML = email;
+            roleCell.innerHTML = role;
+            actionCell.innerHTML = '<button class="text-blue-500 hover:underline">Edit</button><button class="text-red-500 hover:underline ml-2" onclick="deleteRow(this)">Hapus</button>';
+            
+            document.getElementById('userForm').reset();
+        });
+
+        function deleteRow(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+</body>
+</html>

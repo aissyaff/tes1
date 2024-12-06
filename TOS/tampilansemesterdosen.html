@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-white-100">
+  <div class="bg-white shadow-md">
+    <div class="container mx-auto p-4 flex flex-col md:flex-row items-center justify-between">
+      
+   
+      <div class="flex flex-col items-center justify-between w-full md:w-auto">
+        <a href="#" class="text-2xl font-bold text-black">BookBase</a>
+      </div>
+
+  
+      <div class="flex flex-col md:flex-row md:space-x-2 mt-2 md:mt-0 w-full md:w-auto">
+        <div class="w-full text-center md:text-left">
+          <a href="#" class="text-sm font-bold hover:text-black-600">>Semester 3</a> 
+        </div>
+      </div>
+
+   
+      <div class="w-full flex justify-center mt-4 md:mt-0 md:w-auto md:ml-8">
+        <div class="relative w-full max-w-xs">
+          <input type="text" placeholder="Search" class="p-2 pl-10 pr-4 border rounded-md focus:outline-none focus:ring focus:ring-blue-300 w-full">
+          <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600"></i>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center ml-8 space-x-12 mt-4 md:mt-0">
+        <a href="#" class="text-gray-700">Home</a>
+        <a href="#" class="text-gray-700">Semester</a>
+        <a href="#" class="text-gray-700">Logout</a>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-2 ml-auto mt-4 md:mt-0">
+        <i class="fas fa-user-circle text-2xl"></i>
+        <span class="text-black">Dosen</span>
+      </div>
+
+              <button id="hamburger" class="md:hidden text-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+          </div>
+      </div>
+  <section class="bg-white p-6 rounded-lg mb-8 mt-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="w-full h-52 bg-white border border-black rounded-lg">
+        <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+          <div class="text-lg">Wawasan Budaya</div>
+          <div class="text-sm font-light">Semester 3</div>
+        </div>
+      </div>
+      <div class="w-full h-52 bg-white border border-black rounded-lg">
+        <div class="bg-indigo-300 w-full h-20 rounded-tl-lg rounded-tr-lg font-semibold text-black-000 p-1">
+          <div class="text-lg">Teknologi Multimedia</div>
+          <div class="text-sm font-light">Semester 3</div>
+        </div>
+      </div>
+    </div>
+  </section>
+    </div>
+  </section>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    const dropdownButton = document.querySelector('button');
+    const dropdownMenu = document.querySelector('.absolute');
+
+    dropdownButton.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
